@@ -16,13 +16,16 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
-        # Get user input
         age = float(request.form["age"])
         blood_pressure = float(request.form["blood_pressure"])
         cholesterol = float(request.form["cholesterol"])
+        heart_rate = float(request.form["heart_rate"])
+        bmi = float(request.form["bmi"])
+        smoking = int(request.form["smoking"])
+        exercise = float(request.form["exercise"])
 
         # Predict
-        features = np.array([[age, blood_pressure, cholesterol]])
+        features = np.array([[age, blood_pressure, cholesterol, heart_rate, bmi, smoking, exercise]])
         prediction = model.predict(features)[0]
         risk = "High Risk" if prediction == 1 else "Low Risk"
 
