@@ -8,7 +8,8 @@ import pickle
 data = pd.read_csv("cardio_data.csv")  # Replace with your actual dataset path
 
 # Preprocessing
-X = data[["age", "blood_pressure", "cholesterol"]]  # Features
+X = data[["age", "blood_pressure", "cholesterol", "heart_rate", "bmi", "smoking", "exercise"]]  # Features
+ # Features
 y = data["cardio_disease"]  # Target (1 = Disease, 0 = No Disease)
 
 # Split the dataset
