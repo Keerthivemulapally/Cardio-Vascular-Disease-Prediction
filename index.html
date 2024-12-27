@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Risk Prediction</title>
+</head>
+<body>
+    <h2>Cardiovascular Disease Prediction</h2>
+    <form method="POST" action="/predict">
+        <label for="age">Age:</label>
+        <input type="number" step="any" name="age" id="age" required><br><br>
+        
+        <label for="blood_pressure">Blood Pressure:</label>
+        <input type="number" step="any" name="blood_pressure" id="blood_pressure" required><br><br>
+        
+        <label for="cholesterol">Cholesterol:</label>
+        <input type="number" step="any" name="cholesterol" id="cholesterol" required><br><br>
+        
+        <label for="heart_rate">Resting Heart Rate:</label>
+        <input type="number" step="any" name="heart_rate" id="heart_rate" required><br><br>
+        
+        <label for="bmi">Body Mass Index (BMI):</label>
+        <input type="number" step="any" name="bmi" id="bmi" required><br><br>
+        
+        <label for="smoking">Smoking Status (1 for Smoker, 0 for Non-Smoker):</label>
+        <input type="number" step="1" name="smoking" id="smoking" required><br><br>
+        
+        <label for="exercise">Physical Activity (Hours per Week):</label>
+        <input type="number" step="any" name="exercise" id="exercise" required><br><br>
+        
+        <button type="submit">Predict</button>
+    </form>
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
